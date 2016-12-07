@@ -7,7 +7,7 @@
 # src/gtm/client/Makefile
 #
 #-----------------------------------------------------------------------------
-top_builddir=../../..
+top_builddir = ../../..
 include $(top_builddir)/src/Makefile.global
 subdir = src/gtm/client
 
@@ -21,6 +21,7 @@ LDFLAGS=-L$(top_build_dir)/common -L$(top_build_dir)/libpq
 LIBS=-lpthread
 
 all:all-lib
+	$(MAKE) -C test $@ || exit
 
 include $(top_srcdir)/src/Makefile.shlib
 
