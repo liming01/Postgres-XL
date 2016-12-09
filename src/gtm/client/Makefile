@@ -16,12 +16,12 @@ SO_MAJOR_VERSION= 1
 SO_MINOR_VERSION= 0
 
 OBJS=fe-misc.o fe-connect.o pqexpbuffer.o ip.o gtm_client.o fe-protocol.o
-LDFLAGS=-L$(top_build_dir)/common -L$(top_build_dir)/libpq
+LDFLAGS=-L$(top_builddir)/common -L$(top_builddir)/libpq
 
 LIBS=-lpthread
 
 all:all-lib
-	$(MAKE) -C test $@ || exit
+	#$(MAKE) -C test $@ || exit
 
 include $(top_srcdir)/src/Makefile.shlib
 
